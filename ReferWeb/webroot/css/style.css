@@ -1,0 +1,114 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 20px;
+}
+
+td,
+.col {
+    background: lightBlue;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-width: 0 0 1px 1px;
+    white-space: nowrap;
+}
+
+    td:first-child,
+    .col:first-child {
+        background: lightGreen;
+        border-width: 0 0 1px 0;
+    }
+
+    td:not(:first-child),
+    .col:not(:first-child) {
+        width: 100%;
+    }
+
+.flex-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+    .flex-grid .col:not(:first-child) {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+.div-table {
+    display: table;
+}
+
+    .div-table .flex-grid {
+        display: table-row;
+    }
+
+        .div-table .flex-grid .col {
+            display: table-cell;
+        }
+
+.grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+    .grid .col:nth-child(odd):not(:last-child) {
+        background: lightGreen;
+    }
+
+    .grid .col.colspan-2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+.ant-btn {
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.015);
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0,0,0,0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+
+.ant-btn-red {
+    color: #fff;
+    background-color: #FF5A44;
+    border-color: #FF5A44;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+}

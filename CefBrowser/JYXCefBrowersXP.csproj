@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props" Condition="Exists('..\..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80839BEA-E568-476A-BD19-CAC4CCE020E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WDCloud.JYXCefBrowersXP</RootNamespace>
+    <AssemblyName>WDCloud.JYXCefBrowersXP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp">
+      <HintPath>..\..\packages\CefSharp.Common.XP.39.0.0\CefSharp\x86\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core">
+      <HintPath>..\..\packages\CefSharp.Common.XP.39.0.0\CefSharp\x86\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>..\..\packages\CefSharp.Common.XP.39.0.0\CefSharp\x86\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms">
+      <HintPath>..\..\packages\CefSharp.WinForms.39.0.0\CefSharp\x86\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChromiumWebBrowserEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JSInteractionObj.cs" />
+    <Compile Include="KSRWBrowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KSRWBrowers.Designer.cs">
+      <DependentUpon>KSRWBrowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebBrowers.Designer.cs">
+      <DependentUpon>WebBrowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ClientEntity\ClientEntity.csproj">
+      <Project>{d377366a-3990-4060-bc5e-11ff2c66fd42}</Project>
+      <Name>ClientEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClientInterface\ClientInterface.csproj">
+      <Project>{36896407-9e92-44f1-9094-afd9e8693bd7}</Project>
+      <Name>ClientInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceEntity\ServiceEntity.csproj">
+      <Project>{2840aa14-ed39-4909-8999-1b8c874a666f}</Project>
+      <Name>ServiceEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TeacherService\TeacherService.csproj">
+      <Project>{949af922-1324-4261-b0a7-8dc8c9f7cf21}</Project>
+      <Name>TeacherService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KSRWBrowers.resx">
+      <DependentUpon>KSRWBrowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowers.resx">
+      <DependentUpon>WebBrowers.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JYXBrowersHandler.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets" Condition="Exists('..\..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets')" />
+  <Import Project="..\..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets" Condition="Exists('..\..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets')" />
+  <Import Project="..\..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets" Condition="Exists('..\..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)bin\x86\release\WDCloud.JYXCefBrowersXP.dll" "$(SolutionDir)TeacherClient\bin\x86\release\Modules\XP\" /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

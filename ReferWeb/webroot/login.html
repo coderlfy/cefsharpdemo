@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/winHandler.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h4>请输入账户信息</h4>
+    <div class="div-table">
+        <div class="flex-grid">
+            <div class="col">用户名：</div>
+            <div class="col"><input type="text" id="username" /></div>
+        </div>
+        <div class="flex-grid">
+            <div class="col">密码：</div>
+            <div class="col"><input type="password" id="pwd" /></div>
+        </div>
+    </div>
+    <div style="line-height:35px;"><input class="ant-btn ant-btn-red" onclick="login();" id="btnlogin" type="button" value="登录" /> <input id="btnclose" onclick="winApi.closeLoginFrm();" class="ant-btn ant-btn-red" type="button" value="关闭" /></div>
+    <div style="line-height:35px;"><input class="ant-btn ant-btn-red" onclick="winApi.startDebug();" id="btnlogin" type="button" value="启动web调试器" /></div>
+</body>
+</html>

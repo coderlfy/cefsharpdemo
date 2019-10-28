@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54F0DC93-2B36-4122-AC48-9794A49B2357}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReferenceLib</RootNamespace>
+    <AssemblyName>ReferenceLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="cef\CefSharp.BrowserSubprocess.Core.dll" />
+    <Content Include="cef\CefSharp.BrowserSubprocess.exe" />
+    <Content Include="cef\CefSharp.Core.dll" />
+    <Content Include="cef\CefSharp.Core.xml" />
+    <Content Include="cef\CefSharp.dll" />
+    <Content Include="cef\CefSharp.WinForms.dll" />
+    <Content Include="cef\CefSharp.WinForms.xml" />
+    <Content Include="cef\CefSharp.xml" />
+    <Content Include="cef\d3dcompiler_43.dll" />
+    <Content Include="cef\d3dcompiler_47.dll" />
+    <Content Include="cef\dsoframer.ocx" />
+    <Content Include="cef\ffmpeg.exe" />
+    <Content Include="cef\ffmpegsumo.dll" />
+    <Content Include="cef\libcef.dll" />
+    <Content Include="cef\libeay32.dll" />
+    <Content Include="cef\libEGL.dll" />
+    <Content Include="cef\libgcc_s_dw2-1.dll" />
+    <Content Include="cef\libGLESv2.dll" />
+    <Content Include="cef\libocsync.dll" />
+    <Content Include="cef\libowncloudcmd.dll" />
+    <Content Include="cef\libowncloudsync.dll" />
+    <Content Include="cef\libqt5keychain.dll" />
+    <Content Include="cef\libstdc++-6.dll" />
+    <Content Include="cef\libwinpthread-1.dll" />
+    <Content Include="cef\pdf.dll" />
+    <Content Include="cef\sync-exclude.lst" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cef\cef.pak" />
+    <None Include="cef\cef_100_percent.pak" />
+    <None Include="cef\cef_200_percent.pak" />
+    <None Include="cef\devtools_resources.pak" />
+    <None Include="cef\icudtl.dat" />
+    <None Include="locales\am.pak" />
+    <None Include="locales\ar.pak" />
+    <None Include="locales\bg.pak" />
+    <None Include="locales\bn.pak" />
+    <None Include="locales\ca.pak" />
+    <None Include="locales\cs.pak" />
+    <None Include="locales\da.pak" />
+    <None Include="locales\de.pak" />
+    <None Include="locales\el.pak" />
+    <None Include="locales\en-GB.pak" />
+    <None Include="locales\en-US.pak" />
+    <None Include="locales\es-419.pak" />
+    <None Include="locales\es.pak" />
+    <None Include="locales\et.pak" />
+    <None Include="locales\fa.pak" />
+    <None Include="locales\fi.pak" />
+    <None Include="locales\fil.pak" />
+    <None Include="locales\fr.pak" />
+    <None Include="locales\gu.pak" />
+    <None Include="locales\he.pak" />
+    <None Include="locales\hi.pak" />
+    <None Include="locales\hr.pak" />
+    <None Include="locales\hu.pak" />
+    <None Include="locales\id.pak" />
+    <None Include="locales\it.pak" />
+    <None Include="locales\ja.pak" />
+    <None Include="locales\kn.pak" />
+    <None Include="locales\ko.pak" />
+    <None Include="locales\lt.pak" />
+    <None Include="locales\lv.pak" />
+    <None Include="locales\ml.pak" />
+    <None Include="locales\mr.pak" />
+    <None Include="locales\ms.pak" />
+    <None Include="locales\nb.pak" />
+    <None Include="locales\nl.pak" />
+    <None Include="locales\pl.pak" />
+    <None Include="locales\pt-BR.pak" />
+    <None Include="locales\pt-PT.pak" />
+    <None Include="locales\ro.pak" />
+    <None Include="locales\ru.pak" />
+    <None Include="locales\sk.pak" />
+    <None Include="locales\sl.pak" />
+    <None Include="locales\sr.pak" />
+    <None Include="locales\sv.pak" />
+    <None Include="locales\sw.pak" />
+    <None Include="locales\ta.pak" />
+    <None Include="locales\te.pak" />
+    <None Include="locales\th.pak" />
+    <None Include="locales\tr.pak" />
+    <None Include="locales\uk.pak" />
+    <None Include="locales\vi.pak" />
+    <None Include="locales\zh-CN.pak" />
+    <None Include="locales\zh-TW.pak" />
+    <None Include="cef\SLABHIDtoUART.lib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)cef\*.*" "$(SolutionDir)CefAPP\bin\x86\release\" /s /e /y
+xcopy "$(ProjectDir)locales\*.*" "$(SolutionDir)CefAPP\bin\x86\release\locales\" /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

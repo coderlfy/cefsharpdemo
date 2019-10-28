@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{EFEE620D-EBB9-4328-A85E-2DDD2499CE91}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>WebDev.WebHost40</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft.VisualStudio.WebHost\ByteParser.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\ByteString.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\Connection.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\DateTimeHelper.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\Host.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\Messages.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\NtlmAuth.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\Request.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\Server.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\SR.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\SRCategoryAttribute.cs" />
+    <Compile Include="Microsoft.VisualStudio.WebHost\SRDescriptionAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebHost.resources" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)bin\release\WebDev.WebHost40.dll" "$(SolutionDir)CefApp\bin\x86\release\webroot\bin\" /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
